@@ -22,3 +22,6 @@
 [submodule "other_ws/online_teleop"]
 	path = other_ws/online_teleop
 	url = git@github.com:Garage-at-EEE-More-Robot/online_teleop.git
+[submodule "ros2_ws/src/micro_ros_setup"]
+	path = ros2_ws/src/micro_ros_setup
+	url = https://github.com/micro-ROS/micro_ros_setup
