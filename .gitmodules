@@ -25,3 +25,9 @@
 [submodule "ros2_ws/src/micro_ros_setup"]
 	path = ros2_ws/src/micro_ros_setup
 	url = https://github.com/micro-ROS/micro_ros_setup
+[submodule "ros2_ws/src/xv_11_driver"]
+	path = ros2_ws/src/xv_11_driver
+	url = https://github.com/mjstn/xv_11_driver
+[submodule "ros2_ws/src/teleop_twist_keyboard"]
+	path = ros2_ws/src/teleop_twist_keyboard
+	url = https://github.com/ros-teleop/teleop_twist_keyboard
