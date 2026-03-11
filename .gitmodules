@@ -16,8 +16,8 @@
 [submodule "ros2_ws/src/linorobot2_hardware_hippo_esp32_fix"]
 	path = ros2_ws/src/linorobot2_hardware_hippo_esp32_fix
 	url = git@github.com:Garage-at-EEE-More-Robot/linorobot2_hardware_hippo_esp32_fix.git
-[submodule "ros_ws/src/linorobot2_humble"]
-	path = ros_ws/src/linorobot2_humble
+[submodule "ros2_ws/src/linorobot2_humble"]
+	path = ros2_ws/src/linorobot2_humble
 	url = git@github.com:Garage-at-EEE-More-Robot/linorobot2_humble.git
 [submodule "other_ws/online_teleop"]
 	path = other_ws/online_teleop
