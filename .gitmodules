@@ -1,9 +1,12 @@
 [submodule "other_ws/llm_chat_robot"]
 	path = other_ws/llm_chat_robot
-	url = git@github.com-humjie:Garage-at-EEE-More-Robot/llm_chat_robot.git
+	url = git@github.com:Garage-at-EEE-More-Robot/llm_chat_robot.git
 [submodule "ros2_ws/src/morerobot_docking"]
 	path = ros2_ws/src/morerobot_docking
-	url = git@github.com-humjie:Garage-at-EEE-More-Robot/morerobot_docking.git
+	url = git@github.com:Garage-at-EEE-More-Robot/morerobot_docking.git
 [submodule "ros2_ws/src/moretea_arm"]
 	path = ros2_ws/src/moretea_arm
-	url = git@github.com-humjie:Garage-at-EEE-More-Robot/moretea_arm.git
+	url = git@github.com:Garage-at-EEE-More-Robot/moretea_arm.git
+[submodule "ros2_ws/src/head_pubsub"]
+	path = ros2_ws/src/head_pubsub
+	url = git@github.com:Garage-at-EEE-More-Robot/head_pubsub.git
