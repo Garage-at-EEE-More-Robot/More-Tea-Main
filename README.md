@@ -6,36 +6,43 @@
 - `ros2_ws/` for ROS 2 packages and full robot stack builds
 
 ## Requirements
-- Ubuntu/Linux (Jetson-compatible setup is supported)
+- Ubuntu 22.04
+- ROS 2 Humble
 - Git with submodule support
-- ROS 2 (recommended: Humble)
-- `colcon` and `rosdep`
-- Python 3.10+
+- Conda (Miniconda or Anaconda)
 
 ## Dependency Installation
-Install core tooling:
+Use the unified installer script (single flow for all dependencies across all submodules):
 
 ```bash
-sudo apt update
-sudo apt install -y \
-	git \
-	python3-colcon-common-extensions \
-	python3-rosdep \
-	python3-vcstool
+chmod +x scripts/install_dependencies.sh
+./scripts/install_dependencies.sh
 ```
 
-Initialize rosdep once (if not already done):
+Optional arguments:
 
 ```bash
-sudo rosdep init
-rosdep update
+./scripts/install_dependencies.sh --env-name moretea --python 3.10
+./scripts/install_dependencies.sh --dry-run
 ```
 
-Install ROS 2 workspace dependencies:
+Note: ROS 2 Humble is used from the system installation (`/opt/ros/humble`). The script does not install ROS into Conda.
+
+What the script installs/configures:
+- System dependencies via `apt` (build tools, audio/video libs, ROS OpenCV bridge packages)
+- `rosdep` initialization/update
+- All git submodules (`sync` + `update --init --recursive`)
+- One shared Conda environment for Python dependencies
+- All Python packages needed by the project (PlatformIO, AI/voice, WebRTC, perception)
+- SCServo static library build for `moretea_arm`
+- Teensy udev rule copy (if present)
+- ROS workspace dependency resolution (`rosdep install` in `ros2_ws`)
+
+After script completion, in new terminals use:
 
 ```bash
-cd ros2_ws
-rosdep install --from-paths src --ignore-src -y --skip-keys "microxrcedds_agent micro_ros_agent"
+source /opt/ros/$ROS_DISTRO/setup.bash
+conda activate moretea
 ```
 
 ## Installation
